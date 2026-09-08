@@ -4,33 +4,46 @@ using System.Globalization;
 class Program
 {
     static void Main(string[] args)
+
+    
     {
-        Console.WriteLine("Welcome to the Program!");
+        DisplayWelcomeMessage();
+        string userName = PromptUserName();
+        int userNumber = PromptUserNumber();
+        int squaredNumber = SquareNumber(userNumber);
+        DisplayResult(userName, squaredNumber);
+        
+
     }
-    static string PromptUserName (string userName)
+
+    static void DisplayWelcomeMessage ()
     {
-        Console.Write("Please enter your name:");
+        Console.WriteLine("Welcome to the program!");
+    }
+    static string PromptUserName ()
+    {
+        Console.Write("Please enter your name: ");
         string name = Console.ReadLine();
         return name;
     }
 
-    static int PromptUserNumber (int userNumber)
+    static int PromptUserNumber ()
     {
-        Console.Write("Please enter your favorite number:");
-        string number = Console.ReadLine();
-        int numb = int.Parse(number);
+        Console.Write("Please enter your favorite number: ");
+        string userInput = Console.ReadLine();
+        int number = int.Parse(userInput);
 
-        return numb;
+        return number;
     }
 
     static int SquareNumber (int number)
     {
         int sq = number * number;
-        return number;
+        return sq;
 
     }
 
-    static void DisplayResult (int sq, string name)
+    static void DisplayResult(string name, int sq)
     {
         Console.WriteLine ($"{name}, the square of your number is {sq}");
     }
