@@ -76,14 +76,14 @@ class Program
         {
             letter = "D";   
         }
-        
+
 
         else if (percentageNumber < 60)
         {
             letter = "F";
         }
 
-        Console.WriteLine ($"Your grade is {letter}{sign}");
+            Console.WriteLine ($"Your grade is {letter}{sign}");
 
         if (percentageNumber >= 70) 
         {
