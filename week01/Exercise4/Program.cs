@@ -6,24 +6,25 @@ class Program
     static void Main(string[] args)
     {
         List<int> numbers = new List<int>();
-        int num = -1;
+        int number = -1;
 
-    while (num != 0)
+    while (number != 0)
     {
         Console.Write("Enter a list of numbers, (0 to quit):");
         string response = Console.ReadLine();
-        int numb = int.Parse(response);
-        
-
-    if (numb != 0)
+        number = int.Parse(response);  
+    
+    if (number != 0)
         {
-            numbers.Add(numb);
+            numbers.Add(number);
         }
 
+    }
+
     int sum = 0;
-    foreach (int number in numbers)
+    foreach (int num in numbers)
         {
-            sum += numb;
+            sum += num;
         }
 
     Console.WriteLine($"The sum is {sum}");
@@ -33,16 +34,18 @@ class Program
 
     int max = numbers [0];
 
-    foreach (int number in numbers)
+    foreach (int num in numbers)
         {
-            if (number > max)
+            if (num > max)
             {
-                max = number;
+                max = num;
             }
-            Console.WriteLine($"The max is {max}");
+            
         }
 
-    }
+        Console.WriteLine($"The max is {max}");
+
+    
 
         
     }        
