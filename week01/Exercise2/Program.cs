@@ -83,7 +83,7 @@ class Program
             letter = "F";
         }
 
-            Console.WriteLine ($"Your grade is {letter}{sign}");
+            Console.WriteLine($"Your grade is {letter}{sign}");
 
         if (percentageNumber >= 70) 
         {

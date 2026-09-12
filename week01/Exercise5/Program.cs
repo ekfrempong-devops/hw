@@ -3,31 +3,27 @@ using System.Globalization;
 
 class Program
 {
-    static void Main(string[] args)
-
-    
+    static void Main(string[] args)    
     {
         DisplayWelcomeMessage();
         string userName = PromptUserName();
         int userNumber = PromptUserNumber();
         int squaredNumber = SquareNumber(userNumber);
-        DisplayResult(userName, squaredNumber);
-        
-
+        DisplayResult(userName, squaredNumber); 
     }
 
-    static void DisplayWelcomeMessage ()
+    static void DisplayWelcomeMessage()
     {
         Console.WriteLine("Welcome to the program!");
     }
-    static string PromptUserName ()
+    static string PromptUserName()
     {
         Console.Write("Please enter your name: ");
         string name = Console.ReadLine();
         return name;
     }
 
-    static int PromptUserNumber ()
+    static int PromptUserNumber()
     {
         Console.Write("Please enter your favorite number: ");
         string userInput = Console.ReadLine();
@@ -36,7 +32,7 @@ class Program
         return number;
     }
 
-    static int SquareNumber (int number)
+    static int SquareNumber(int number)
     {
         int sq = number * number;
         return sq;
