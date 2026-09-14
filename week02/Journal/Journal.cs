@@ -29,6 +29,7 @@ using (StreamWriter outputFile = new StreamWriter(file))
 public void LoadFromFile(string file)
 {
         string [] lines = File.ReadAllLines(file);
+        
         foreach (string line in lines)
         {
             string [] parts = line.Split("|"); 
@@ -36,6 +37,7 @@ public void LoadFromFile(string file)
             entry._date = parts[0];
             entry._promptText = parts[1];
             entry._entryText = parts[2];
+            _entries.Add(entry);
         }
 }
    

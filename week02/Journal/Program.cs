@@ -54,7 +54,6 @@ class Program
     string prompt = randomPrompt.GetRandomPrompt();
     Console.WriteLine(prompt); 
     string response = Console.ReadLine();
-    Console.WriteLine(">");
      
     DateTime theCurrentTime = DateTime.Now;
     string dateText = theCurrentTime.ToShortDateString();
