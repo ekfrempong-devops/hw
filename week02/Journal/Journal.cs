@@ -21,7 +21,7 @@ using (StreamWriter outputFile = new StreamWriter(file))
     {
         foreach (Entry entry in _entries)
         {
-            outputFile.WriteLine($"{entry._date}|{entry._promptText}|{entry._entryText}");
+            outputFile.WriteLine($"{entry._date}|{entry._promptText}|{entry._entryText}|{entry._mood}");
         }
     } 
 }
@@ -29,6 +29,7 @@ using (StreamWriter outputFile = new StreamWriter(file))
 public void LoadFromFile(string file)
 {
         string [] lines = File.ReadAllLines(file);
+        _entries.Clear();
         
         foreach (string line in lines)
         {
@@ -37,6 +38,7 @@ public void LoadFromFile(string file)
             entry._date = parts[0];
             entry._promptText = parts[1];
             entry._entryText = parts[2];
+            entry._mood = parts [3];
             _entries.Add(entry);
         }
 }

@@ -1,3 +1,4 @@
+// Exceeded program requirements by saving another information "mood" in the Journal entry.
 using System.IO;
 using System;
 using System.Reflection.Metadata;
@@ -46,7 +47,7 @@ class Program
         Console.WriteLine("3. Load");
         Console.WriteLine("4. Save");
         Console.WriteLine("5. Quit");
-        Console.Write("What would you like to do? ");       
+        Console.Write("What would you like to do? ");      
     }
     static void Write(Journal journal)
     {
@@ -54,6 +55,9 @@ class Program
     string prompt = randomPrompt.GetRandomPrompt();
     Console.WriteLine(prompt); 
     string response = Console.ReadLine();
+
+    Console.Write("How were you feeling today? " );
+    string mood = Console.ReadLine();
      
     DateTime theCurrentTime = DateTime.Now;
     string dateText = theCurrentTime.ToShortDateString();
@@ -62,6 +66,7 @@ class Program
     entry._date = dateText;
     entry._promptText = prompt;
     entry._entryText = response;
+    entry._mood = mood;
     
     journal.AddEntry(entry);        
     }
