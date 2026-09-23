@@ -31,7 +31,7 @@ public string GetDisplayText()
         }
         else
         {
-            return ($"{_chapter} {_verse}-{_endVerse}");
+            return ($"{_book} {_chapter}:{_verse}-{_endVerse}");
         }
     }
 }
