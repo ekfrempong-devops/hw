@@ -1,3 +1,4 @@
+// Added code to generate and present random scripture to user to exceed program requirements.
 using System;
 using System.Net;
 
