@@ -1,4 +1,4 @@
-// Added code to generate and present random scripture to user to exceed program requirements.
+// Added code for program to work with a library of scriptures rather than a single one, generate and present random scripture to user.
 using System;
 using System.Net;
 
