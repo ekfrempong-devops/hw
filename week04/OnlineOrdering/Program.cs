@@ -6,27 +6,13 @@ class Program
     {
         // ORDER 1
 
-        Address address1 = new Address(
-            "123 Main Street",
-            "Provo",
-            "Utah",
-            "USA");
+        Address address1 = new Address("123 Main Street","Provo","Utah","USA");
 
-        Customer customer1 = new Customer(
-            "John Smith",
-            address1);
+        Customer customer1 = new Customer("John Smith",address1);
 
-        Product product1 = new Product(
-            "Laptop",
-            "L001",
-            800.00,
-            1);
+        Product product1 = new Product("Laptop","L001",800.00,1);
 
-        Product product2 = new Product(
-            "Wireless Mouse",
-            "M002",
-            25.00,
-            2);
+        Product product2 = new Product("Wireless Mouse","M002",25.00,2);
 
         Order order1 = new Order(customer1);
 
@@ -36,27 +22,13 @@ class Program
 
         // ORDER 2
 
-        Address address2 = new Address(
-            "15 Independence Avenue",
-            "Accra",
-            "Greater Accra",
-            "Ghana");
+        Address address2 = new Address("15 Independence Avenue","Accra","Greater Accra","Ghana");
 
-        Customer customer2 = new Customer(
-            "Kwame Mensah",
-            address2);
+        Customer customer2 = new Customer("Kwame Mensah",address2);
 
-        Product product3 = new Product(
-            "Keyboard",
-            "K003",
-            45.00,
-            1);
+        Product product3 = new Product("Keyboard","K003",45.00,1);
 
-        Product product4 = new Product(
-            "Monitor",
-            "M004",
-            250.00,
-            2);
+        Product product4 = new Product("Monitor","M004",250.00,2);
 
         Order order2 = new Order(customer2);
 
@@ -75,7 +47,7 @@ class Program
         Console.WriteLine(order1.GetShippingLabel());
         Console.WriteLine();
 
-        Console.WriteLine($"Total Cost: ${order1.GetTotalCost():F2}");
+        Console.WriteLine($"Total Cost: ${order1.GetTotalCost()}");
 
         Console.WriteLine();
 
@@ -91,6 +63,6 @@ class Program
         Console.WriteLine(order2.GetShippingLabel());
         Console.WriteLine();
 
-        Console.WriteLine($"Total Cost: ${order2.GetTotalCost():F2}");
+        Console.WriteLine($"Total Cost: ${order2.GetTotalCost()}");
     }
 }
