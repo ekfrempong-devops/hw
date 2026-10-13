@@ -1,0 +1,5 @@
+850
+Simple|Give a talk|Speak at Sacrament meeting when asked|100|True
+Eternal|To study the scriptures|Study for at least 10 minutes|50
+Checklist|Attend the temple|Attend and perform any ordinace|50|3|3|500
+Checklist|Wake up early|Wake up by at least 6:00am|10|0|10|1000

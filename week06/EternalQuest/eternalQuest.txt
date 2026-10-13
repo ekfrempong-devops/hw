@@ -1,0 +1,4 @@
+0
+Simple|Give a talk.|Speak in sacrament meeting when asked.|100|False
+Eternal|Study the scriptures.|Study the scriptures for 10 minutes.|50
+Checklist|Attend the temple.|Attend and perform any ordinance.|50|0|3|500
