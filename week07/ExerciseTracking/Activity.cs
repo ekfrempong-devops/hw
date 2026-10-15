@@ -1,34 +1,34 @@
-using System.Security.Cryptography.X509Certificates;
 
-public class Activity
+public abstract class Activity
 {
-    protected string _date;
-    protected int _activityLength;
-    protected int _distance;
-    protected int _speed;
-    protected int _pace;
-    public Activity(string date, int activityLength, int distance, int speed, int pace)
+    private string _date;
+    private int _activityLength;
+    private string _activityName;
+
+    public Activity(string date, int activityLength, string activityName)
     {
         _date = date;
         _activityLength = activityLength;
-        _distance = distance;
-        _speed = speed;
-        _pace = pace;
+        _activityName = activityName;
     }
-    public virtual GetDistance()
+
+    public abstract double GetDistance();
+
+    public abstract double GetSpeed();
+
+    public abstract double GetPace();
+
+    public virtual string GetSummary()
     {
-        
+        double distance = GetDistance();
+        double speed = GetSpeed();
+        double pace = GetPace();
+
+        return $"{_date} {_activityName} ({_activityLength} min) - " + $"Distance {distance:F1} miles, " + $"Speed {speed:F1} mph, " + $"Pace: {pace:F1} min per mile";
     }
-    public virtual GetSpeed()
+
+    public int GetActivityLength()
     {
-        
-    }
-    public virtual GetPace()
-    {
-        
-    }
-    public virtual GetSummary()
-    {
-        
+        return _activityLength;
     }
 }
